@@ -16,12 +16,12 @@ class ToqueFama
     def mostrarToques(numero)
         if numero == nil then return nil end
         toques = ""
-        for i in 1..4
+        for i in 0..3
             if @numeroSecreto.to_s.include? numero.to_s[i].to_s
                 toques += "*"
             end
-        end       
-        numero.to_s[i].to_s 
+        end
+        toques
     end
 
     def cambiarNumero()
