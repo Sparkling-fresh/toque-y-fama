@@ -33,8 +33,13 @@ describe ToqueFama do
     end
 
     it "una fama" do
-        toqueFama = ToqueFama.new(2999)
-        expect(toqueFama.validar(2158)).to eq "!"
+        toqueFama = ToqueFama.new(2153)
+        expect(toqueFama.validar(2978)).to eq "!"
+    end
+
+    it "numero de 3 digitos" do
+        toqueFama = ToqueFama.new(2153)
+        expect(toqueFama.validar(278)).to eq "Ingrese un numero de 4 digitos"
     end
 
 end

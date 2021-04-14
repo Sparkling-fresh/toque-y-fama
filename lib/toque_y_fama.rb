@@ -6,7 +6,9 @@ class ToqueFama
     end
 
     def validar(numero)
-        if numero.to_s == @numeroSecreto.to_s then
+        if numero.to_s.length != 4
+            "Ingrese un numero de 4 digitos"
+        elsif numero.to_s == @numeroSecreto.to_s
             "YOU WIN"
         else
             resultado = mostrarFamas(numero)

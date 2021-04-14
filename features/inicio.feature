@@ -28,3 +28,18 @@ Scenario: Una Fama
 Given inicio de la aplicación
 When elije el 2678
 Then muestra mensaje "!"
+
+Scenario: Dos Famas
+Given inicio de la aplicación
+When elije el 2178
+Then muestra mensaje "!!"
+
+Scenario: Una Fama y un toque
+Given inicio de la aplicación
+When elije el 2781
+Then muestra mensaje "!*"
+
+Scenario: Numero de 3 dígitos
+Given inicio de la aplicación
+When elije el 278
+Then muestra mensaje "Ingrese un numero de 4 digitos"
