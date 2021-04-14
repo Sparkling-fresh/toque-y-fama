@@ -23,3 +23,8 @@ Scenario: Cuatro toques
 Given inicio de la aplicación
 When elije el 5321
 Then muestra mensaje "****"
+
+Scenario: Una Fama
+Given inicio de la aplicación
+When elije el 2678
+Then muestra mensaje "!"

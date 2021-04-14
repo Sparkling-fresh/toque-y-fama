@@ -9,15 +9,28 @@ class ToqueFama
         if numero.to_s == @numeroSecreto.to_s then
             "YOU WIN"
         else
-            mostrarToques(numero)
+            resultado = mostrarFamas(numero)
+            resultado += mostrarToques(numero)
+            resultado
         end
+    end
+
+    def mostrarFamas(numero)
+        if numero == nil then return nil end
+        famas = ""
+        for i in 0..3
+            if @numeroSecreto.to_s[i].to_s == numero.to_s[i].to_s
+                famas += "!"
+            end
+        end
+        famas
     end
 
     def mostrarToques(numero)
         if numero == nil then return nil end
         toques = ""
         for i in 0..3
-            if @numeroSecreto.to_s.include? numero.to_s[i].to_s
+            if (@numeroSecreto.to_s.include? numero.to_s[i].to_s) && (@numeroSecreto.to_s[i].to_s != numero.to_s[i].to_s)
                 toques += "*"
             end
         end

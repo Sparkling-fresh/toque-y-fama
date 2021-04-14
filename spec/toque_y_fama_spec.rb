@@ -17,19 +17,24 @@ describe ToqueFama do
         expect(toqueFama.validar(numero)).to eq "YOU WIN"
     end
 
-    it "numero sin toques" do
+    it "sin toques" do
         toqueFama = ToqueFama.new(2153)
         expect(toqueFama.validar(4678)).to eq ""
     end
 
-    it "numero dos toques" do
+    it "dos toques" do
         toqueFama = ToqueFama.new(2153)
-        expect(toqueFama.validar(2416)).to eq "**"
+        expect(toqueFama.validar(1462)).to eq "**"
     end
 
-    it "numero cuatro toques" do
+    it "cuatro toques" do
         toqueFama = ToqueFama.new(2153)
         expect(toqueFama.validar(3521)).to eq "****"
+    end
+
+    it "una fama" do
+        toqueFama = ToqueFama.new(2999)
+        expect(toqueFama.validar(2158)).to eq "!"
     end
 
 end
