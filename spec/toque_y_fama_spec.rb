@@ -2,10 +2,10 @@ require './lib/toque_y_fama.rb'
 
 describe ToqueFama do
 
-    # it "numero correcto" do
-    #     toqueFama = ToqueFama.new(2153)
-    #     expect(toqueFama.validar(2153)).to eq "YOU WIN"
-    # end
+    it "numero correcto" do
+        toqueFama = ToqueFama.new(2153)
+        expect(toqueFama.validar(2153)).to eq "YOU WIN"
+    end
 
     # it "numero sin toques" do
     #     toqueFama = ToqueFama.new(2153)
